@@ -10,6 +10,7 @@ then, install the packages using npm:
 ```
 npm install
 ```
+and start it by :
 
 ```
 npm start
