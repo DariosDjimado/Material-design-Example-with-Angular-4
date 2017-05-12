@@ -1,0 +1,18 @@
+.about{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-image: url(/assets/wintry-2067866_1920.jpg);
+	overflow:hidden;
+	transition: transform .5s ease-out;
+}
+
+.brand-detail{
+	overflow: hidden;
+	height: 400px;
+	width: 100%;
+	padding: 0;
+}
