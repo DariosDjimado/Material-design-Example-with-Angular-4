@@ -57,47 +57,37 @@ main{
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: flex-start;
-	
 	background-color: #f5f5f5;
 	color: #000;
-}
-main section{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 0 10px;
-
-}
-
-.about{
-	height: 400px;
-	width: 100%;
-	background-size: cover;
-	background-image: url(/assets/wintry-2067866_1920.jpg);
-
 }
 
 footer{
 	background-color: #f5f5f5;
+	color: #000;
 }
 .pre-footer{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-flow: row wrap;
-	
+	margin-bottom: 10px;
 }
 .pre-footer-card{
-	height: 250px;
-	width: 250px;
-	background-color: #fff;
-
-	
+	width: 300px;
 }
-
+.pre-footer-card-avatar{
+	background-image: url('/assets/img/macbook-pixabay.jpg');
+	background-size: cover;
+}
+.pre-footer-card-last{
+	float: right;
+}
+.copyright{
+	font-size: 14px;
+}
 @media (max-width: 400px){
 	.pre-footer{
 		justify-content: center;		
 	}
 }
+

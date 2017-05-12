@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,700";
+
 * {
 	box-sizing: border-box;
 }
@@ -8,11 +11,24 @@ html, body{
 	padding: 0;
 	width: 100%;
 	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
 	background-color: #f5f5f5;
 }
 
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
-
 .main-header .mat-toolbar-row{
 	justify-content: space-between;
+}
+
+main section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0 10px;
+}
+
+.comming-soon{
+
+	height: 500px;
+
 }
