@@ -8,6 +8,7 @@ html, body{
 	padding: 0;
 	width: 100%;
 	overflow-x: hidden;
+	background-color: #f5f5f5;
 }
 
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';

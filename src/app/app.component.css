@@ -1,0 +1,103 @@
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999999;
+}
+.main-header-title{
+	display: flex;
+	height: 100%;
+	min-width: 234px;
+	justify-content: space-between;
+	align-items: center;
+}
+.brand{
+	display: flex;
+}
+
+.brand-name{
+
+}
+.brand-logo{
+	width: 50px;
+	height: 30px;
+}
+@media (max-width:400px ){
+	.brand-name{
+		display: none;
+	}
+}
+
+
+header > md-progress-bar > div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element{
+	    transition: transform 250ms ease-out,stroke .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+.sidenav{
+	width: 250px;
+	
+	background: #b0bec5;
+	color: rgba(0,0,0,.87);
+}
+.sidenav a{
+	padding: 12px 0;
+	width: 100%;
+}
+.menu-btn{
+	height: 100%;
+}
+.container{
+	margin-top: 64px;
+}
+
+main{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	
+	background-color: #f5f5f5;
+	color: #000;
+}
+main section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0 10px;
+
+}
+
+.about{
+	height: 400px;
+	width: 100%;
+	background-size: cover;
+	background-image: url(/assets/wintry-2067866_1920.jpg);
+
+}
+
+footer{
+	background-color: #f5f5f5;
+}
+.pre-footer{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-flow: row wrap;
+	
+}
+.pre-footer-card{
+	height: 250px;
+	width: 250px;
+	background-color: #fff;
+
+	
+}
+
+@media (max-width: 400px){
+	.pre-footer{
+		justify-content: center;		
+	}
+}
