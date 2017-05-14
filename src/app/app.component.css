@@ -17,11 +17,16 @@ header{
 }
 
 .brand-name{
+	display: inherit;
+	align-items: center;
+	line-height: 12px;
+	font-size: 12px;
 
 }
 .brand-logo{
-	width: 50px;
+	width: 30px;
 	height: 30px;
+	border-radius: 50%;
 }
 @media (max-width:400px ){
 	.brand-name{
@@ -37,14 +42,13 @@ header > md-progress-bar > div.mat-progress-bar-primary.mat-progress-bar-fill.ma
 
 .sidenav{
 	width: 250px;
-	
-	background: #b0bec5;
-	color: rgba(0,0,0,.87);
+	background: #fff;
 }
+
 .sidenav a{
-	padding: 12px 0;
-	width: 100%;
+	padding: 4px 0;
 }
+
 .menu-btn{
 	height: 100%;
 }
@@ -52,18 +56,8 @@ header > md-progress-bar > div.mat-progress-bar-primary.mat-progress-bar-fill.ma
 	margin-top: 64px;
 }
 
-main{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: flex-start;
-	background-color: #f5f5f5;
-	color: #000;
-}
-
 footer{
-	background-color: #f5f5f5;
-	color: #000;
+	padding: 20px 0 0 0;
 }
 .pre-footer{
 	display: flex;
@@ -90,4 +84,3 @@ footer{
 		justify-content: center;		
 	}
 }
-

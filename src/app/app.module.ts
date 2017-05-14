@@ -14,12 +14,14 @@ import { TemplatesComponent } from './components/templates/templates.component';
 import { HomeComponent } from './components/home/home.component';
 import { MyWorksComponent } from './components/my-works/my-works.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const mainRoutes:  Routes=[
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path: 'templates', component: TemplatesComponent},
   {path: 'works', component: MyWorksComponent},
+  {path: 'contact', component: ContactComponent},
   {path:'**',component: PageNotFoundComponent}
 
 ]
@@ -29,13 +31,15 @@ const mainRoutes:  Routes=[
     TemplatesComponent,
     HomeComponent,
     MyWorksComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterialModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(mainRoutes)
   ],
   providers: [],
