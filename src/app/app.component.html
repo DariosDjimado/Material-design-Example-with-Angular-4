@@ -1,15 +1,27 @@
 <header>
-	<md-toolbar color="primary" class="main-header">
+	<md-toolbar *ngIf="!showSeachBar" class="main-header">
 		<div class="main-header-title">
 			<span>The Ultimate</span>
 			<button md-button class="menu-btn" (click)="sidenav.toggle()">
 				<md-icon>menu</md-icon>
 		    </button>
 		</div>
+
 		<div class="brand">
+			<button md-mini-fab color="primary" (click)="showSeachBar=true"><md-icon>search</md-icon></button>
 			<img class="brand-logo" src="assets/img/hummingbird-pixabay.svg">
 			<span class="brand-name">&nbsp;LAC</span>
 		</div>	
+	</md-toolbar>
+	<md-toolbar *ngIf="showSeachBar" class="search-toolbar">
+		<button md-mini-fab color="primary" (click)="showSeachBar=false"><md-icon>arrow_back</md-icon></button>
+		<span>&nbsp;Back&nbsp;</span>
+		<form class="search-toolbar-form">
+			<md-input-container class="full-width">
+		      <input mdInput placeholder="search" type="text" autofocus>
+		    </md-input-container>
+		</form>
+		<button md-mini-fab color="primary" (click)="showSeachBar=false"><md-icon>search</md-icon></button>
 	</md-toolbar>
 	<md-progress-bar color="primary" mode="determinate" [value]="pageProgress"></md-progress-bar>
 </header>
@@ -21,6 +33,7 @@
 
 	<md-sidenav #sidenav class="sidenav" opened="false" align="right" mode="side">
 		<md-nav-list>
+
 		   <a md-list-item routerLink="home" routerLinkActive="active">
 				<md-icon>home</md-icon>
 				<span>&nbsp;Home</span>
@@ -37,21 +50,7 @@
 				<md-icon>contacts</md-icon>
 				<span>&nbsp;Contact</span>
 			</a>
-		</md-nav-list>	
-		<md-menu #menu="mdMenu">
-		  <button md-menu-item>
-		    <md-icon>dialpad</md-icon>
-		    <span>Redial</span>
-		  </button>
-		  <button md-menu-item disabled>
-		    <md-icon>voicemail</md-icon>
-		    <span>Check voicemail</span>
-		  </button>
-		  <button md-menu-item>
-		    <md-icon>notifications_off</md-icon>
-		    <span>Disable alerts</span>
-		  </button>
-		</md-menu>	
+		</md-nav-list>
 	</md-sidenav>
 
 
