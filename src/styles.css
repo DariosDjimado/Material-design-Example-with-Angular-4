@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700";
 
 * {
@@ -19,16 +19,16 @@ html, body{
 	justify-content: space-between;
 }
 
-main section{
+.row{
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 0 10px;
+	padding: 50px 50px;
 }
 
 .comming-soon{
-
 	height: 500px;
+}
 
+.full-width{
+	width: 100%;
 }
