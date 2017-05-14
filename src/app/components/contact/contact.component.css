@@ -1,0 +1,24 @@
+.contact{
+	display: inherit;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 100%;
+}
+.contact-card{
+	width: 100%;
+	max-width: 650px;
+}
+
+.contact-card-about{
+	min-height: 200px;
+}
+.contact-detail{
+	width: 100%;
+	max-width: 300px;
+}
+.maps{
+	background-color: #607D8B;
+}
+@media only screen and (max-width: 400px){
+
+}
