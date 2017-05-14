@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 	homeImgOpacity:number=0.9;
-	homeScale:number=1;
+	homeScale:number=2;
   	constructor() { }
 
 	ngOnInit() {
@@ -15,8 +15,9 @@ export class HomeComponent implements OnInit {
 			let scrollPositionY=window.scrollY;
 
 			if (scrollPositionY<400){
-				this.homeImgOpacity=1-scrollPositionY*0.9/400;
-				this.homeScale=1+scrollPositionY*0.9/400;
+
+				this.homeImgOpacity = Math.max(scrollPositionY*0.9/400,0.2);
+				this.homeScale=2-scrollPositionY*0.9/400;
 			}
 			
 		})
