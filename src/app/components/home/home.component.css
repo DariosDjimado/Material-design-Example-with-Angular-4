@@ -5,9 +5,9 @@
 	height: 100%;
 	width: 100%;
 	background-size: cover;
-	background-image: url(/assets/wintry-2067866_1920.jpg);
+	background-image: url(/assets/img/turntable-1109588_1280.jpg);
 	overflow:hidden;
-	transition: transform .5s ease-out;
+	transition: transform .7s ease-in-out;
 }
 .work{
 	width: 100%;
@@ -16,14 +16,15 @@
 
 .brand-detail{
 	overflow: hidden;
-	height: 600px;
+	height: 400px;
 	width: 100%;
 	padding: 0;
+	color: #f5f5f5;
 }
 .brand{
     min-height: 500px;
     color: #fff;
-	background: #212e34;
+	background: #fff;
 }
 .brand-name{
 	display: inherit;
@@ -55,6 +56,21 @@
 	border-radius: 50%;
 }
 
-.pr-color{
-
+.brand-description{
+	background-color: #f5f5f5;
+	font-size: 1.25rem;
+	line-height: 1.875rem;
+	text-align: center;
+}
+.brand-talking {
+	background-color: #cccccc;
+}
+.brand-description p{
+	padding: 0 1.25rem;
+}
+.brand-product{
+	justify-content: space-around;
+}
+.brand-product-card{
+	width: 300px;
 }
