@@ -10,13 +10,17 @@ export class AppComponent implements OnInit{
   	showSeachBar:boolean=false;
   	constructor(){}
 
-	ngOnInit(){		
+	ngOnInit(){
 		window.addEventListener('scroll',(e:any)=>{
-			let x=window.innerHeight;
-			let y=document.documentElement.scrollTop || document.body.scrollTop;
-			let z=document.body.scrollHeight;
-			this.pageProgress=(x+y)*100/z;
+			this.setProgressBarValue();
 		})
+	}
+
+	setProgressBarValue(){
+		let x=window.innerHeight;
+		let y=document.documentElement.scrollTop || document.body.scrollTop;
+		let z=document.body.scrollHeight;
+		this.pageProgress=(x+y)*100/z;
 	}
 
 }

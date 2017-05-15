@@ -38,12 +38,11 @@ header{
 		display: none;
 	}
 }
-
-
 header > md-progress-bar > div.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element{
 	    transition: transform 250ms ease-out,stroke .3s cubic-bezier(0.4, 0, 1, 1);
 }
 
+/** Side nav **/
 
 .sidenav{
 	width: 250px;
@@ -52,6 +51,7 @@ header > md-progress-bar > div.mat-progress-bar-primary.mat-progress-bar-fill.ma
 
 .sidenav a{
 	padding: 4px 0;
+	color: rgba(0, 0, 0, 0.54);
 }
 
 .menu-btn{
@@ -60,6 +60,8 @@ header > md-progress-bar > div.mat-progress-bar-primary.mat-progress-bar-fill.ma
 .container{
 	margin-top: 64px;
 }
+
+/** Footer **/
 
 footer{
 	padding: 20px 0 0 0;
