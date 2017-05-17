@@ -3,22 +3,24 @@
 		<div class="brand-name">
 			<div class="brand-name-initials">
 				<span>L</span>
-				<span>A</span>
+				<span>&amp;</span>
 				<span>C</span>
 			</div>
 			<h1>
-				<span class="pr-color">LEARN</span> 
-				<span class="snd-color">AND</span>
-				<span class="lst-color">CREATE</span>
+				<span>LEARN AND CREATE</span>
 			</h1>
 		</div>
-		<img src="assets/img/hummingbird-pixabay.svg">
+		<img src="assets/img/learnandcreate.png">
 	</div>
 </section>
 
-<section class="row brand-detail">
-	<div class="about" [style.transform]="'scale('+homeScale+')'">
-		<p>Everyday, make the world great !</p>
+<section class="row brand-detail-container">
+	<div class="col brand-detail" [style.transform]="'scale('+homeScale+')'">
+		<div class="brand-detail-title-container">
+			<h1 class="brand-detail-title">Do it with your computer Technology is the key</h1>
+		</div>
+		
+		<a routerLink='.'>Everyday, we make the world great!</a>
 	</div>
 </section>
 
@@ -27,7 +29,9 @@
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quis similique quo nisi dicta nulla eos cumque accusantium quaerat quos, minus cum dolore provident ab fuga, explicabo voluptatum obcaecati tempore, labore illum aut excepturi earum eum necessitatibus optio? At dolor maiores optio debitis velit dolore doloremque libero laboriosam dignissimos necessitatibus, qui, assumenda numquam ab, saepe.
 	</p>
-	<footer>Challenge accepted <md-icon>done</md-icon></footer>
+	<footer>
+		<strong>Challenge accepted <md-icon>done</md-icon></strong> 
+	</footer>
 </section>
 
 <section class="row brand-product brand-talking">
@@ -36,8 +40,8 @@
 		<md-card-subtitle>Lorem ipsum dolor sit</md-card-subtitle>
 		<img md-card-image src="assets/img/address-158338.svg">
 		<md-card-actions>
-			<button md-button>Lorem</button>
-			<button md-button>Lorem</button>
+			<button md-button>More</button>
+			<button md-button>Buy</button>
 		</md-card-actions>
 	</md-card>
 	<md-card class="brand-product-card">
@@ -54,8 +58,8 @@
 		<md-card-subtitle>Lorem ipsum dolor sit</md-card-subtitle>
 		<img md-card-image src="assets/img/address-158338.svg">
 		<md-card-actions>
-			<button md-button>Lorem</button>
-			<button md-button>Lorem</button>
+			<button md-button>More</button>
+			<button md-button>Buy</button>
 		</md-card-actions>
 	</md-card>
 	<md-card class="brand-product-card">
@@ -63,8 +67,8 @@
 		<md-card-subtitle>Lorem ipsum dolor sit</md-card-subtitle>
 		<img md-card-image src="assets/img/address-158338.svg">
 		<md-card-actions>
-			<button md-button>Lorem</button>
-			<button md-button>Lorem</button>
+			<button md-button>More</button>
+			<button md-button>Buy</button>
 		</md-card-actions>
 	</md-card>
 </section>
@@ -79,7 +83,7 @@
 	</footer>
 </section>
 
-<section class="row work">
+<section class="row brand-work-overview">
 	<md-tab-group class="full-width" dynamicHeight="true">
 	  <md-tab>
 	    <ng-template md-tab-label>
@@ -92,7 +96,7 @@
   &lt;meta charset="utf-8"&gt;
  &lt;/head&gt;
  &lt;body&gt;
-  &lt;p&gt;hello word&lt;/p&gt;
+  &lt;p class="awesome"&gt;hello word&lt;/p&gt;
  &lt;/body&gt;
 &lt;/html&gt;</pre>
 </code>
@@ -102,7 +106,7 @@
 	      Css
 	    </ng-template>
 	    <code>
-	    	<pre><var>var sun="shine"</var></pre>
+	    	<pre><var>.awesome{{'{'}}display:flex;{{'}'}}</var></pre>
 	    </code>
 	  </md-tab>
 	  <md-tab>
