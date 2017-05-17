@@ -7,17 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 	homeScale:number;
+	docu=false;
   	constructor() { }
 
 	ngOnInit() {
 		window.addEventListener('scroll',(e:any)=>{
 			let scrollPositionY=window.scrollY;
 
-			if (scrollPositionY<400){
-				this.homeScale=Math.max(scrollPositionY*0.9/300,1);
+			if(scrollPositionY>250){
+				this.homeScale=1.1;
+			}
+			if(scrollPositionY<250){
+				this.homeScale=1;
 			}
 			
 		})
 	}
-
+	show(){
+		console.log(this.docu);
+	}
 }

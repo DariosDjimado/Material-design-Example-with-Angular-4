@@ -8,6 +8,16 @@ import { Component,OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   	pageProgress:number=0;
   	showSeachBar:boolean=false;
+  	popo:boolean=true;
+  	languages={
+  		currentValue:'En',
+  		options:[
+  		{name:'Deutsch',code:'Ds'},
+  		{name:'English',code:'En'},
+  		{name:'Español',code:'Es'},
+  		{name:'Esperanto',code:'Eo'},
+  		{name:'Français',code:'Fr'}		
+  	]};
   	constructor(){}
 
 	ngOnInit(){
@@ -21,6 +31,10 @@ export class AppComponent implements OnInit{
 		let y=document.documentElement.scrollTop || document.body.scrollTop;
 		let z=document.body.scrollHeight;
 		this.pageProgress=(x+y)*100/z;
+	}
+	changeLang(mdSelectChange){
+		console.log(mdSelectChange.value);
+		console.log(this.languages.currentValue)
 	}
 
 }
