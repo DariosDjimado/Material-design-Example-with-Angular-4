@@ -4,6 +4,15 @@
     color: #fff;
 	background: #fff;
 }
+@media only screen and (max-width: 400px){
+	.brand{
+		padding-left: 0!important;
+		padding-right: 0!important;
+	}
+	.brand-name-initials{
+		padding: 3.125rem;
+	}
+}
 .brand-name{
 	display: inherit;
 	flex-flow: column nowrap;
@@ -55,6 +64,7 @@
 }
 .brand-detail-title-container{
 	position: relative;
+	color: #fff;
 	background-color: rgba(3, 169, 244, 0.9);
 	box-shadow: 0 2px 4px 8px rgba(0,0,0,.1);
 }
@@ -147,17 +157,6 @@
 
 
 
-
-
-
-
-
-/** Brand work overview **/
-.brand-work-overview{
-	width: 100%;
-	height: 400px;
-}
-
 /** Brand description **/
 
 .brand-description{
@@ -186,5 +185,33 @@
 	}
 	25%{
 		border-bottom-color: #369;
+	}
+}
+
+/** grid list**/
+md-grid-tile {
+  background: #262222;
+}
+.catalog-grid-list{
+	height: 800px;
+}
+.catalog-grid-list md-grid-tile-footer{
+	background-color: #00BCD4
+}
+
+.catalog-grid-list md-grid-tile:hover catalog-grid-list-img{
+	transform: scale(1.2);
+}
+.catalog-grid-list-img{
+	max-width: 25vw;
+	min-width: 10vw;
+}
+
+@media only screen and (max-width: 500px){
+	.catalog-grid-list-img{
+		max-width: 20vw;
+	}
+	.catalog-grid-list{
+		height: 400px;
 	}
 }

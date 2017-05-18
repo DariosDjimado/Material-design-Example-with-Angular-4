@@ -83,42 +83,20 @@
 	</footer>
 </section>
 
-<section class="row brand-work-overview">
-	<md-tab-group class="full-width" dynamicHeight="true">
-	  <md-tab>
-	    <ng-template md-tab-label>
-	      Html
-	    </ng-template>
-	    <code>
-<pre>&lt;html&gt;
- &lt;head&gt;
-  &lt;title&gt;Alien&lt;/title&gt;
-  &lt;meta charset="utf-8"&gt;
- &lt;/head&gt;
- &lt;body&gt;
-  &lt;p class="awesome"&gt;hello word&lt;/p&gt;
- &lt;/body&gt;
-&lt;/html&gt;</pre>
-</code>
-	  </md-tab>
-	  <md-tab>
-	    <ng-template md-tab-label>
-	      Css
-	    </ng-template>
-	    <code>
-	    	<pre><var>.awesome{{'{'}}display:flex;{{'}'}}</var></pre>
-	    </code>
-	  </md-tab>
-	  <md-tab>
-	    <ng-template md-tab-label>
-	      Javascript
-	    </ng-template>
-	    <code>
-<pre>
-<var>var sun="shine"</var>
-alert(sun)
-</pre>
-	    </code>
-	  </md-tab>
-	</md-tab-group>
+<section class="row">
+	<md-toolbar color="primary">
+		<span>Catalog</span>
+	</md-toolbar>
+	<md-grid-list cols="2" rowHeight="fit" class="full-width catalog-grid-list">
+		<md-grid-tile *ngFor="let tile of tiles">
+			<md-grid-tile-header>{{tile.header}}</md-grid-tile-header>
+			<a routerLink="work" class="catalog-grid-list-content">
+				<img class="catalog-grid-list-img" src="{{tile.img}}" alt="">
+			</a>
+			<md-grid-tile-footer>
+				<a href="{{tile.footer.link}}" md-button mdTooltip="{{tile.footer.tooltip}}" mdTooltipPosition="above">{{tile.footer.company}}</a>
+				
+			</md-grid-tile-footer>
+		</md-grid-tile>
+	</md-grid-list>
 </section>
