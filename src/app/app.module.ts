@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule }  from '@angular/material';
 // use for animations
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// AceEditor Module
+import { AceEditorModule } from 'ng2-ace-editor';
 
 import { AppComponent } from './app.component';
 import { TemplatesComponent } from './components/templates/templates.component';
@@ -20,7 +22,7 @@ const mainRoutes:  Routes=[
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path: 'templates', component: TemplatesComponent},
-  {path: 'works', component: MyWorksComponent},
+  {path: 'work', component: MyWorksComponent},
   {path: 'contact', component: ContactComponent},
   {path:'**',component: PageNotFoundComponent}
 
@@ -40,6 +42,7 @@ const mainRoutes:  Routes=[
     HttpModule,
     MaterialModule,
     BrowserAnimationsModule,
+    AceEditorModule,
     RouterModule.forRoot(mainRoutes)
   ],
   providers: [],

@@ -1,3 +1,29 @@
-<section class="comming-soon">
-	working on it
+<section class="row work-overview">
+	<md-toolbar color="primary"><span>Recent work</span></md-toolbar>
+	<md-tab-group class="full-width" dynamicHeight="true">
+	  <md-tab>
+	    <ng-template md-tab-label>
+	      Html
+	    </ng-template>
+		<div class="current-work">
+			 <ace-editor [(text)]="html" theme="monokai" mode="html" style="height: 100%"></ace-editor>
+		</div>
+	  </md-tab>
+	  <md-tab>
+	    <ng-template md-tab-label>
+	      Css
+	    </ng-template>
+		<div class="current-work">
+			 <ace-editor [(text)]="css"  theme="monokai" mode="css" style="height: 100%"></ace-editor>
+		</div>
+	  </md-tab>
+	  <md-tab>
+	    <ng-template md-tab-label>
+	      Javascript
+	    </ng-template>
+		<div class="current-work">
+			 <ace-editor [text]="script" theme="monokai" mode="javascript" style="height: 100%"></ace-editor>
+		</div>
+	  </md-tab>
+	</md-tab-group>   
 </section>
