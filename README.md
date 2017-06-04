@@ -1,4 +1,4 @@
-# Material-design-Example-with-Angular-2
+# Material-design-Example-with-Angular-4
 Before cloning the project, make sure you have Nodejs, npm and Angular CLi installed.
 
 See it [here](https://dariosdjimado.github.io/material1/).

@@ -1,118 +1,110 @@
-<header>
-	<md-toolbar class="main-header">
-		<div class="main-header-title">
-			<span>The Ultimate</span>
-			<button md-button class="menu-btn" (click)="sidenav.toggle()">
-				<md-icon>menu</md-icon>
-		    </button>
-		</div>
-
-		<div class="brand">
-			<button md-mini-fab color="primary" *ngIf="!showSeachBar" (click)="showSeachBar=true"><md-icon>search</md-icon></button>
-			<md-select name="language" placeholder="Language" floatPlaceholder="never" [(ngModel)]="languages.currentValue" (change)="changeLang($event)">
-			  <md-option *ngFor="let lang of languages.options" [value]="lang.code">
-			    {{ lang.name }}
-			  </md-option>
-			</md-select>
-		</div>
-		
-	</md-toolbar>
-	<md-progress-bar color="primary" mode="determinate" [value]="pageProgress"></md-progress-bar>
-
-	<md-toolbar *ngIf="showSeachBar" class="search-toolbar">
-		<button class="search-toolbar-close" md-mini-fab color="primary" (click)="showSeachBar=false"><md-icon>close</md-icon></button>
-		<form class="search-toolbar-form" #searchForm="ngForm">
-			<md-input-container class="full-width input-container" floatPlaceholder="never">
-		      <input mdInput placeholder="search"  type="search" name="searchInput" [(ngModel)]="seachValue" autofocus>
-		    </md-input-container>
-		    <button md-mini-fab type="submit" color="primary" [disabled]="!searchForm.form.valid">
-		    	<md-icon>search</md-icon>
-		</button>
-		</form>
-		
-	</md-toolbar>
-		
-</header>
-
-<md-sidenav #sidenav class="sidenav" opened="false" align="start" mode="side">
-	<md-nav-list>
-	   <a md-list-item routerLink="home" routerLinkActive="active">
-			<md-icon>home</md-icon>
-			<span>&nbsp;Home</span>
-		</a>
-		<a md-list-item routerLink="templates" routerLinkActive="active">
-			<md-icon>explore</md-icon>
-			<span>&nbsp;Template</span>
-		</a>
-		<a md-list-item routerLink="work" routerLinkActive="active">
-			<md-icon>code</md-icon>
-			<span>&nbsp;My work</span>
-		</a>
-		<a md-list-item routerLink="contact" routerLinkActive="active">
-			<md-icon>contacts</md-icon>
-			<span>&nbsp;Contact</span>
-		</a>
-	</md-nav-list>
-</md-sidenav>
-
 <md-sidenav-container class="container">
+  <md-sidenav #sidenav class="sidenav" opened="false" align="start" mode="side">
+    <md-nav-list>
+      <a md-list-item routerLink="home" routerLinkActive="active">
+        <md-icon>home</md-icon>
+        <span>&nbsp;Home</span>
+      </a>
+      <a md-list-item routerLink="work" routerLinkActive="active">
+        <md-icon>code</md-icon>
+        <span>&nbsp;My work</span>
+      </a>
+      <a md-list-item routerLink="contact" routerLinkActive="active">
+        <md-icon>contacts</md-icon>
+        <span>&nbsp;Contact</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
 	<div>
+    <header>
+      <md-toolbar class="main-header">
+        <div class="main-header-title">
+          <span>The Ultimate</span>
+          <button md-button class="menu-btn" (click)="sidenav.toggle()">
+            <md-icon>menu</md-icon>
+          </button>
+        </div>
+        <div class="brand">
+          <button md-mini-fab color="primary" *ngIf="!showSeachBar" (click)="showSeachBar=true"><md-icon>search</md-icon></button>
+          <md-select name="language" placeholder="Language" floatPlaceholder="never" [(ngModel)]="languages.currentValue" (change)="changeLang($event)">
+            <md-option *ngFor="let lang of languages.options" [value]="lang.code">
+              {{ lang.name }}
+            </md-option>
+          </md-select>
+        </div>
+      </md-toolbar>
+      <md-progress-bar color="primary" mode="determinate" [value]="pageProgress"></md-progress-bar>
+      <md-toolbar *ngIf="showSeachBar" class="search-toolbar">
+        <button class="search-toolbar-close" md-mini-fab color="primary" (click)="showSeachBar=false"><md-icon>close</md-icon></button>
+        <form class="search-toolbar-form" #searchForm="ngForm">
+          <md-input-container class="full-width input-container" floatPlaceholder="never">
+            <input mdInput placeholder="search"  type="search" name="searchInput" [(ngModel)]="seachValue" autofocus>
+          </md-input-container>
+          <button md-mini-fab type="submit" color="primary" [disabled]="!searchForm.form.valid">
+            <md-icon>search</md-icon>
+          </button>
+        </form>
+
+      </md-toolbar>
+    </header>
 		<router-outlet></router-outlet>
+    <footer>
+      <md-card>
+        <div class="pre-footer-contianer">
+          <div class="pre-footer">
+            <md-card class="pre-footer-card">
+              <md-card-header>
+                <div md-card-avatar class="pre-footer-card-avatar"></div>
+                <md-card-title>Lorem ipsum.</md-card-title>
+                <md-card-subtitle>Lorem ipsum dolor sit amet.</md-card-subtitle>
+              </md-card-header>
+              <img md-card-image src="assets/img/seo-pixabay.jpg">
+              <md-card-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt, suscipit qui! Asperiores laudantium totam atque, animi illo fuga repudiandae.</p>
+              </md-card-content>
+              <md-card-actions>
+                <button md-button>Wikipedia</button>
+                <button md-button class="pre-footer-card-last">LEARN</button>
+              </md-card-actions>
+            </md-card>
+            <md-card class="pre-footer-card">
+              <md-card-header>
+                <div md-card-avatar class="pre-footer-card-avatar"></div>
+                <md-card-title>Lorem ipsum.</md-card-title>
+                <md-card-subtitle>Lorem ipsum dolor sit.</md-card-subtitle>
+              </md-card-header>
+              <img md-card-image src="assets/img/seo-pixabay.jpg">
+              <md-card-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea in, velit adipisci cum aperiam nostrum inventore corrupti iusto optio voluptatibus?</p>
+              </md-card-content>
+              <md-card-actions>
+                <button md-button>Wikipedia</button>
+                <button md-button class="pre-footer-card-last">LEARN</button>
+              </md-card-actions>
+            </md-card>
+            <md-card class="pre-footer-card">
+              <md-card-header>
+                <div md-card-avatar class="pre-footer-card-avatar"></div>
+                <md-card-title>Lorem ipsum.</md-card-title>
+                <md-card-subtitle>Lorem ipsum dolor.</md-card-subtitle>
+              </md-card-header>
+              <img md-card-image src="assets/img/seo-pixabay.jpg">
+              <md-card-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quos magnam asperiores repellat. Impedit amet odit repudiandae, rerum nisi veritatis!</p>
+              </md-card-content>
+              <md-card-actions>
+                <button md-button>Wikipedia</button>
+                <button md-button class="pre-footer-card-last">LEARN</button>
+              </md-card-actions>
+            </md-card>
+          </div>
+        </div>
+      </md-card>
+      <md-toolbar>
+        <span  class="copyright">© 2017 L &amp; C | <a md-button href="https://github.com/DariosDjimado">Darios Djimado</a> </span>
+      </md-toolbar>
+    </footer>
 	</div>
 </md-sidenav-container>
 
-<footer>
-	<md-card>
-		<div class="pre-footer">
-			<md-card class="pre-footer-card">
-			  <md-card-header>
-			    <div md-card-avatar class="pre-footer-card-avatar"></div>
-			    <md-card-title>Lorem ipsum.</md-card-title>
-			    <md-card-subtitle>Lorem ipsum dolor sit amet.</md-card-subtitle>
-			  </md-card-header>
-			  <img md-card-image src="assets/img/seo-pixabay.jpg">
-			  <md-card-content>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt, suscipit qui! Asperiores laudantium totam atque, animi illo fuga repudiandae.</p>
-			  </md-card-content>
-			  <md-card-actions>
-			    <button md-button>Wikipedia</button>
-			    <button md-button class="pre-footer-card-last">LEARN</button>
-			  </md-card-actions>
-			</md-card>
-			<md-card class="pre-footer-card">
-			  <md-card-header>
-			    <div md-card-avatar class="pre-footer-card-avatar"></div>
-			    <md-card-title>Lorem ipsum.</md-card-title>
-			    <md-card-subtitle>Lorem ipsum dolor sit.</md-card-subtitle>
-			  </md-card-header>
-			  <img md-card-image src="assets/img/seo-pixabay.jpg">
-			  <md-card-content>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea in, velit adipisci cum aperiam nostrum inventore corrupti iusto optio voluptatibus?</p>
-			  </md-card-content>
-			  <md-card-actions>
-			    <button md-button>Wikipedia</button>
-			    <button md-button class="pre-footer-card-last">LEARN</button>
-			  </md-card-actions>
-			</md-card>
-			<md-card class="pre-footer-card">
-			  <md-card-header>
-			    <div md-card-avatar class="pre-footer-card-avatar"></div>
-			    <md-card-title>Lorem ipsum.</md-card-title>
-			    <md-card-subtitle>Lorem ipsum dolor.</md-card-subtitle>
-			  </md-card-header>
-			  <img md-card-image src="assets/img/seo-pixabay.jpg">
-			  <md-card-content>
-			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quos magnam asperiores repellat. Impedit amet odit repudiandae, rerum nisi veritatis!</p>
-			  </md-card-content>
-			  <md-card-actions>
-			    <button md-button>Wikipedia</button>
-			    <button md-button class="pre-footer-card-last">LEARN</button>
-			  </md-card-actions>
-			</md-card>
-		</div>
-	</md-card>
 
-	<md-toolbar>
-		<span  class="copyright">© 2017 L &amp; C | <a md-button href="https://github.com/DariosDjimado">Darios Djimado</a> </span>	
-	</md-toolbar>
-</footer>
