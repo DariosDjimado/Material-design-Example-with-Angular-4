@@ -1,0 +1,31 @@
+<md-toolbar>
+  <button class="full-height" md-button (click)="sidenav.toggle()">
+    <md-icon>menu</md-icon>
+  </button>
+
+  <span class="fill-remaining-space"></span>
+  <form class="search-toolbar-form" #searchForm="ngForm">
+    <md-input-container class="input-container" floatPlaceholder="never">
+      <input mdInput placeholder="search" type="search" name="searchInput" [(ngModel)]="seachValue" autofocus>
+    </md-input-container>
+    <button md-icon-button type="submit" color="primary" [disabled]="!searchForm.form.valid">
+      <md-icon>search</md-icon>
+    </button>
+  </form>
+
+</md-toolbar>
+<md-progress-bar color="primary" mode="determinate" value="50"></md-progress-bar>
+
+<md-sidenav-container class="container">
+  <md-sidenav #sidenav class="sidenav" [opened]="sidenavOpened" align="start" [mode]="dynamicMode">
+    <app-aside></app-aside>
+  </md-sidenav>
+
+  <div class="content">
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</md-sidenav-container>

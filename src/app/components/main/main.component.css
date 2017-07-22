@@ -1,0 +1,32 @@
+md-toolbar{
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+md-sidenav-container{
+  margin-top: 128px;
+  height: calc(100vh - 128px);
+}
+
+.sidenav{
+  width: 218px;
+}
+
+.content{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-height: calc(100vh - 128px);
+  width: 100%;
+}
+
+.main-content{
+  max-width: 960px;
+  width: 100%;
+  min-height: calc(100vh - 192px);
+  margin: 0 10px;
+}
+
