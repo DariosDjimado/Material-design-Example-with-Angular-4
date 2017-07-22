@@ -1,0 +1,48 @@
+<section>
+
+
+  <md-card>
+    <md-card-header>
+      <md-card-title>
+        <span>{{mode}}</span>
+      </md-card-title>
+    </md-card-header>
+
+    <md-card-content *ngIf="!submitted">
+      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+        <table class="full-width" cellspacing="0">
+          <tr>
+            <md-input-container class="full-width">
+              <input mdInput type="email" placeholder="email" name="email" ngModel
+                     required autofocus email>
+            </md-input-container>
+          </tr>
+          <tr *ngIf="!resetPasswordMode">
+            <md-input-container class="full-width">
+              <input mdInput type="password" placeholder="password" name="password" ngModel required>
+            </md-input-container>
+          </tr>
+          <tr *ngIf="signupMode && !resetPasswordMode">
+            <md-input-container class="full-width">
+              <input mdInput type="password" placeholder="confirm password" name="password" ngModel required>
+            </md-input-container>
+          </tr>
+        </table>
+        <button class="submit-btn" type="submit" md-raised-button color="primary" [disabled]="!authForm.form.valid"
+                (click)="onSubmit()">Envoyer
+        </button>
+
+      </form>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button color="primary" [disabled]=""
+              (click)="onSignup()">{{switchSign}}
+      </button>
+
+      <button md-button color="primary" [disabled]=""
+              (click)="onResetPassword()">I forgot my password
+      </button>
+    </md-card-actions>
+  </md-card>
+
+</section>
