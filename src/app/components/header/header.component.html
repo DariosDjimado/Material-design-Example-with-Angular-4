@@ -1,0 +1,26 @@
+<md-toolbar color="primary">
+  <img class="logo-img" src="assets/img/learnandcreate.png" alt="studen'TSE">
+  <span>Learn&creatE</span>
+
+  <span class="fill-remaining-space"></span>
+
+  <div *ngIf="!onSmallScreen; else smallScreen">
+    <a md-button routerLink="feedback">
+      <md-icon>feedback</md-icon>
+      <span>Feedback</span>
+    </a>
+    <a md-button routerLink="signin">
+      <md-icon>account_circle</md-icon>
+      <span>sign in</span>
+    </a>
+  </div>
+  <ng-template #smallScreen>
+    <a md-icon-button routerLink="feedback">
+      <md-icon>feedback</md-icon>
+    </a>
+    <a md-icon-button routerLink="signin">
+      <md-icon>account_circle</md-icon>
+    </a>
+  </ng-template>
+</md-toolbar>
+
