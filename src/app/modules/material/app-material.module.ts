@@ -7,27 +7,19 @@ import {
 
 @NgModule({
   imports: [
-    MdIconModule,
-    MdButtonModule,
     MdTooltipModule,
     MdInputModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdListModule,
-    MdCardModule,
     MdGridListModule,
     MdSnackBarModule,
     MdTabsModule
   ],
   exports: [
-    MdIconModule,
-    MdButtonModule,
     MdTooltipModule,
     MdInputModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdListModule,
-    MdCardModule,
     MdGridListModule,
     MdSnackBarModule,
     MdTabsModule

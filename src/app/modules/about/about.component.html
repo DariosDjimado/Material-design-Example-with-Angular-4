@@ -1,0 +1,77 @@
+<section class="row">
+  <div class="contact">
+
+    <md-list class="contact-detail">
+      <table>
+        <tr>
+          <md-list-item><h2>Contact</h2></md-list-item>
+        </tr>
+        <tr>
+          <md-list-item>
+            <md-icon>location_on</md-icon>
+            Location: Uranus
+          </md-list-item>
+        </tr>
+        <tr>
+          <md-list-item>
+            <md-icon>phone</md-icon>
+            Phone: +010203040506
+          </md-list-item>
+        </tr>
+        <tr>
+          <md-list-item>
+            <md-icon>email</md-icon>
+            Email: organisation@domain.com
+          </md-list-item>
+        </tr>
+      </table>
+    </md-list>
+    <md-card class="contact-card">
+      <h2>Send us a message</h2>
+      <md-card-content>
+        <form #contactForm="ngForm">
+          <table class="full-width" cellspacing="0">
+            <tr>
+              <td>
+                <md-input-container class="full-width">
+                  <input mdInput placeholder="Your name" type="text" required autofocus [(ngModel)]="message.name"
+                         #name="ngModel" name="name">
+                </md-input-container>
+              </td>
+              <td>
+                <md-input-container class="full-width">
+                  <input mdInput placeholder="Your last name" type="text" required [(ngModel)]="message.lastName"
+                         #lastName="ngModel" name="lastName">
+                </md-input-container>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <md-input-container class="full-width">
+                  <input mdInput placeholder="Email" type="email" required [(ngModel)]="message.email" #email="ngModel"
+                         name="email">
+                </md-input-container>
+              </td>
+            </tr>
+          </table>
+
+          <p>
+            <md-input-container class="full-width">
+              <textarea mdInput class="contact-card-about" placeholder="About" name="about" #about="ngModel"
+                        [(ngModel)]="message.about" required></textarea>
+            </md-input-container>
+          </p>
+
+        </form>
+      </md-card-content>
+      <md-card-actions>
+        <button md-raised-button color="primary" disabled="!contactForm.form.valid">SEND</button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</section>
+<section class="row maps">
+  <iframe width="1000" height="450" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/search?q=Google%2C%20Amphitheatre%20Parkway%2C%20Mountain%20View%2C%20Californie%2C%20%C3%89tats-Unis&key=AIzaSyDlrMfHGDYfzbaGu7O6qkQ1_JT1vmOjpAk"
+          allowfullscreen></iframe>
+</section>
