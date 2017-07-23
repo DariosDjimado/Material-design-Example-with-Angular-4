@@ -6,7 +6,7 @@
   <span class="fill-remaining-space"></span>
   <form class="search-toolbar-form" #searchForm="ngForm">
     <md-input-container class="input-container" floatPlaceholder="never">
-      <input mdInput placeholder="search" type="search" name="searchInput" [(ngModel)]="seachValue" autofocus>
+      <input mdInput placeholder="search" type="search" name="searchInput" ngModel autofocus>
     </md-input-container>
     <button md-icon-button type="submit" color="primary" [disabled]="!searchForm.form.valid">
       <md-icon>search</md-icon>
@@ -25,7 +25,8 @@
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
+    <app-footer></app-footer>
   </div>
 
-  <app-footer></app-footer>
+
 </md-sidenav-container>

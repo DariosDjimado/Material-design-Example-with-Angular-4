@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MdSnackBar} from '@angular/material';
 
 @Component({
@@ -7,63 +7,9 @@ import {MdSnackBar} from '@angular/material';
   styleUrls: ['./my-works.component.css']
 })
 export class MyWorksComponent implements OnInit {
-	html:string = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Awesome</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
-</head>
-<body>
-	<header id="header">The Lion King</header>
-	<main>
-		<section>
-			<p>In the Pride Lands of Africa, a lion rules over the animal kingdom from Pride Rock. 
-			King Mufasa's newborn son, Simba, is presented to the assembled animals by Rafiki,
-			a mandrill who serves as shaman and advisor</p>
-		</section>
-	</main>
-	<footer>© 2047 | The last Alien</footer>
-</body>
-</html>`;
-	css=`
-*{
-    box-sizing: border-box;
-}
-html,body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    background: #3F51B5;
-}
-body,header,main,footer{
-    display: flex;
-}
-body{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    text-align: center;
-}
-header,main,footer{
-    min-height: 4rem;
-    padding: 1.25rem;
-    justify-content: center;
-    align-items: center;
-    
-}
-header{
-    background-color: #FF5722;
-}
-footer{
-    background-color: #FF5722;
-}`;
-script=`
+  html = `\n<!DOCTYPE html>\n<html lang="en">\n<head>\n	<meta charset="UTF-8">\n	<title>Awesome</title>\n    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  \n</head>\n<body>\n	<header id="header">The Lion King</header>\n	<main>\n		<section>\n			<p>In the Pride Lands of Africa, a lion rules over the animal kingdom from Pride Rock. \n			King Mufasa's newborn son, Simba, is presented to the assembled animals by Rafiki,\n			a mandrill who serves as shaman and advisor</p>\n		</section>\n	</main>\n	<footer>© 2047 | The last Alien</footer>\n</body>\n</html>`;
+  css = `\n*{\n    box-sizing: border-box;\n}\nhtml,body{\n    margin: 0;\n    padding: 0;\n    width: 100%;\n    height: 100%;\n    font-size: 16px;\n    background: #3F51B5;\n}\nbody,header,main,footer{\n    display: flex;\n}\nbody{\n    display: flex;\n    flex-flow: column nowrap;\n    justify-content: space-between;\n    font-family: 'Roboto', sans-serif;\n    color: #fff;\n    text-align: center;\n}\nheader,main,footer{\n    min-height: 4rem;\n    padding: 1.25rem;\n    justify-content: center;\n    align-items: center;\n    \n}\nheader{\n    background-color: #FF5722;\n}\nfooter{\n    background-color: #FF5722;\n}`;
+  script = `
 let header=document.querySelector('#header');
 
 setTimeout(()=>{
@@ -71,15 +17,18 @@ setTimeout(()=>{
     header.innerHTML='The last Alien';
 
 },2000)
-`
-    options:any = {maxLines: 1000, printMargin: false};
+`;
+  options: any = {maxLines: 1000, printMargin: false};
 
-	constructor(private snackBar:MdSnackBar) { }
+  constructor(private snackBar: MdSnackBar) {
+  }
 
-	ngOnInit() {
-		this.snackBar.open('Welcome back Mister', 'Thank',{
-			duration: 5000
-		})
-	}
+  ngOnInit() {
+    setTimeout(() => {
+      this.snackBar.open('Welcome back Mister', 'Thank', {
+        duration: 5000
+      })
+    }, 1000)
+  }
 
 }

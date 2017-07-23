@@ -1,7 +1,9 @@
 <md-toolbar color="primary">
   <img class="logo-img" src="assets/img/learnandcreate.png" alt="studen'TSE">
-  <span>Learn&creatE</span>
-
+  <span>Learn&Create</span>
+  <button md-raised-button color="accent" style="margin-left: 10px;">
+    building
+  </button>
   <span class="fill-remaining-space"></span>
 
   <div *ngIf="!onSmallScreen; else smallScreen">
@@ -9,7 +11,7 @@
       <md-icon>feedback</md-icon>
       <span>Feedback</span>
     </a>
-    <a md-button routerLink="signin">
+    <a md-button routerLink="auth">
       <md-icon>account_circle</md-icon>
       <span>sign in</span>
     </a>
@@ -18,7 +20,7 @@
     <a md-icon-button routerLink="feedback">
       <md-icon>feedback</md-icon>
     </a>
-    <a md-icon-button routerLink="signin">
+    <a md-icon-button routerLink="auth">
       <md-icon>account_circle</md-icon>
     </a>
   </ng-template>

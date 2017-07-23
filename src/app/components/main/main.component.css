@@ -27,6 +27,7 @@ md-sidenav-container{
   max-width: 960px;
   width: 100%;
   min-height: calc(100vh - 192px);
+  height: 100%;
   margin: 0 10px;
 }
 

@@ -1,6 +1,9 @@
 /** Footer **/
-
+:host{
+  width: 100%;
+}
 .main-footer{
+  margin-top: 25px;
 
 }
 

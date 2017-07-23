@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {MdCardModule, MdInputModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {SharedMaterialModule} from '../material/shared-material.module';
+import {SharedModule} from '../shared/shared.module';
 
 const authRoutes: Routes = [
   {path: '', component: AuthComponent}
@@ -15,9 +16,9 @@ const authRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(authRoutes),
     MdCardModule,
-    FormsModule,
     MdInputModule,
-    SharedMaterialModule
+    SharedMaterialModule,
+    SharedModule
   ],
   declarations: [AuthComponent]
 })

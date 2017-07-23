@@ -8,7 +8,7 @@
       </md-card-title>
     </md-card-header>
 
-    <md-card-content *ngIf="!submitted">
+    <md-card-content>
       <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
         <table class="full-width" cellspacing="0">
           <tr>
@@ -28,8 +28,7 @@
             </md-input-container>
           </tr>
         </table>
-        <button class="submit-btn" type="submit" md-raised-button color="primary" [disabled]="!authForm.form.valid"
-                (click)="onSubmit()">Envoyer
+        <button class="submit-btn" type="submit" md-raised-button color="primary" [disabled]="!authForm.form.valid">Envoyer
         </button>
 
       </form>

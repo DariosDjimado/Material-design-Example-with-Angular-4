@@ -1,10 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-class ContactMessage{
-	name:string;
-	lastName:string;
-	email:string;
-	about:string;
-}
+import {Component, OnInit} from '@angular/core';
+
+
 
 @Component({
   selector: 'app-contact',
@@ -12,9 +8,10 @@ class ContactMessage{
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-	message:ContactMessage=new ContactMessage;
 
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
