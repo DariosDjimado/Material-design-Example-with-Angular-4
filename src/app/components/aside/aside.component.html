@@ -5,9 +5,18 @@
   </md-list-item>
 
   <md-list-item>
-    <md-icon>code</md-icon>
-    <a md-line routerLink="work">My work</a>
+    <a md-line routerLink="works">My work</a>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <a md-menu-item routerLink="works/learn">Learn</a>
+      <a md-menu-item routerLink="works/create">Create</a>
+      <a md-menu-item routerLink="works/last-session">Last session</a>
+    </md-menu>
   </md-list-item>
+
+
 
   <md-list-item>
     <md-icon>contacts</md-icon>

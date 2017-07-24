@@ -1,0 +1,47 @@
+<div class="table-container">
+  <div>
+    <md-input-container floatPlaceholder="never">
+      <input mdInput #filter type="text" placeholder="filter">
+    </md-input-container>
+  </div>
+  <md-table [dataSource]="dataSource">
+    <!-- Name column -->
+    <ng-container cdkColumnDef="name">
+      <md-header-cell *cdkHeaderCellDef>Name</md-header-cell>
+      <md-cell *cdkCellDef="let row">
+        {{row.name}}
+      </md-cell>
+    </ng-container>
+
+    <!-- Designed by column -->
+    <ng-container cdkColumnDef="designedBy">
+      <md-header-cell *cdkHeaderCellDef>Designed by</md-header-cell>
+      <md-cell *cdkCellDef="let row">
+        {{row.designedBy}}
+      </md-cell>
+    </ng-container>
+
+
+    <!-- Designed by column -->
+    <ng-container cdkColumnDef="firstAppeared">
+      <md-header-cell *cdkHeaderCellDef>First appeared</md-header-cell>
+      <md-cell *cdkCellDef="let row">
+        {{row.firstAppeared}}
+      </md-cell>
+    </ng-container>
+
+
+    <!-- Goto column -->
+    <ng-container cdkColumnDef="goto">
+      <md-header-cell *cdkHeaderCellDef>Learn</md-header-cell>
+      <md-cell *cdkCellDef="let row">
+        <md-icon>forward</md-icon>
+      </md-cell>
+    </ng-container>
+
+
+    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+
+  </md-table>
+</div>

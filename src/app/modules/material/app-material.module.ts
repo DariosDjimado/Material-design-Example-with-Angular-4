@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {
   MdButtonModule, MdCardModule, MdGridListModule,
-  MdIconModule, MdInputModule, MdListModule, MdSidenavModule, MdSnackBarModule, MdTabsModule, MdToolbarModule,
+  MdIconModule, MdInputModule, MdListModule, MdMenuModule, MdSidenavModule, MdSnackBarModule, MdTabsModule,
+  MdToolbarModule,
   MdTooltipModule
 } from '@angular/material';
 
@@ -9,20 +10,18 @@ import {
   imports: [
     MdTooltipModule,
     MdInputModule,
-    MdToolbarModule,
     MdSidenavModule,
     MdGridListModule,
     MdSnackBarModule,
-    MdTabsModule
+    MdMenuModule
   ],
   exports: [
     MdTooltipModule,
     MdInputModule,
-    MdToolbarModule,
     MdSidenavModule,
     MdGridListModule,
     MdSnackBarModule,
-    MdTabsModule
+    MdMenuModule
   ]
 })
 export class AppMaterialModule {
