@@ -10,8 +10,6 @@
       "assets": [
         "assets",
         "favicon.ico",
-        // prod
-        // { "glob": "**/*", "input": "../node_modules/ace-builds/src-noconflict", "output": "./" }
         { "glob": "**/*", "input": "../node_modules/ace-builds/src-noconflict", "output": "./node_modules/ace-builds/src-min" }
       ],
       "index": "index.html",

@@ -1,10 +1,8 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MdSnackBar} from '@angular/material';
 
-import * as ace from 'brace';
+import 'brace';
 import 'brace/ext/language_tools';
-
-ace.acequire('ace/ext/language_tools');
 
 @Component({
   selector: 'app-create',
