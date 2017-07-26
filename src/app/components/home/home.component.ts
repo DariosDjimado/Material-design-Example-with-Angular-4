@@ -7,26 +7,28 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   homeScale: number;
-  docu = false;
 
   tiles = [
-    {header: 'ANGULAR', img: 'assets/img/angular.svg', footer: {company: 'Google', tooltip: '', link: '#'}},
     {
-      header: 'HTML5',
-      img: 'assets/img/HTML5_sticker.svg',
-      footer: {company: 'W3C', tooltip: 'World Wide Web Consortium', link: '#'}
+      header: 'MONGODB',
+      img: 'assets/img/MongoDB_Gray_Logo_FullColor_RGB-01.jpg',
+      footer: {company: 'MongoDB', tooltip: 'MongoDB, Inc', link: '#'}
+    },
+    {
+      header: 'EXPRESSJS',
+      img: 'assets/img/expressjs.png',
+      footer: {company: 'Node.js', tooltip: 'Node.js Foundation', link: '#'}
+    },
+    {
+      header: 'ANGULAR',
+      img: 'assets/img/angular.svg',
+      footer: {company: 'Google', tooltip: 'Google', link: '#'}
     },
     {
       header: 'NODE JS',
       img: 'assets/img/nodejs-new-pantone-black.png',
       footer: {company: 'Node.js', tooltip: 'Node.js Foundation', link: '#'}
-    },
-    {
-      header: 'WEBPACK',
-      img: 'assets/img/webpack-icon.svg',
-      footer: {company: 'Webpack', tooltip: 'Webpack module bundler', link: '#'}
     }
-
   ];
 
   constructor() {
@@ -34,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     window.addEventListener('scroll', (e: any) => {
-      let scrollPositionY = window.scrollY;
+      const scrollPositionY = window.scrollY;
 
       if (scrollPositionY > 250) {
         this.homeScale = 1.1;
@@ -44,9 +46,5 @@ export class HomeComponent implements OnInit {
       }
 
     })
-  }
-
-  show() {
-    console.log(this.docu);
   }
 }
