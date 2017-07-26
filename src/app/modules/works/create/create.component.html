@@ -1,28 +1,103 @@
+<button md-raised-button color="primary" [mdMenuTriggerFor]="editorMenu">Change theme</button>
+<md-menu #editorMenu="mdMenu">
+  <button md-menu-item class="active" (click)="onChangeTheme('monokai')">Monokai</button>
+  <button md-menu-item (click)="onChangeTheme('eclipse')">Eclipse</button>
+  <button md-menu-item (click)="onChangeTheme('github')">Github</button>
+  <button md-menu-item (click)="onChangeTheme('solarized_dark')">Solarized Dark</button>
+  <button md-menu-item (click)="onChangeTheme('tomorrow')">Tomorrow</button>
+  <button md-menu-item (click)="onChangeTheme('sqlserver')">SqlServer</button>
+  <button md-menu-item (click)="onChangeTheme('textmate')">Textmate</button>
+</md-menu>
+
+<button md-raised-button color="primary" [mdMenuTriggerFor]="languageMenu">Change language</button>
+<md-menu #languageMenu="mdMenu">
+  <button md-menu-item class="active" (click)="onChangeLanguage(0)">Html Css Js</button>
+  <button md-menu-item class="active" (click)="onChangeLanguage(1)">Python</button>
+  <button md-menu-item class="active" (click)="onChangeLanguage(2)">C++</button>
+</md-menu>
+
+
 <section class="row work-overview">
-  <md-toolbar color="primary"><span>Recent work</span></md-toolbar>
-  <md-tab-group class="full-width" dynamicHeight="true">
+  <md-tab-group *ngIf="language == 0" class="full-width" dynamicHeight="true">
+
     <md-tab>
       <ng-template md-tab-label>
         Html
       </ng-template>
       <div class="current-work">
-        <ace-editor [(text)]="html" theme="monokai" mode="html" style="height: 100%"></ace-editor>
+        <ace-editor
+          [(text)]="htmlCode"
+          [theme]="theme"
+          [mode]="'html'"
+          [options]="options"
+          [readOnly]="false">
+        </ace-editor>
       </div>
     </md-tab>
+
     <md-tab>
       <ng-template md-tab-label>
         Css
       </ng-template>
       <div class="current-work">
-        <ace-editor [(text)]="css"  theme="monokai" mode="css" style="height: 100%"></ace-editor>
+        <ace-editor
+          [(text)]="cssCode"
+          [theme]="theme"
+          [mode]="'css'"
+          [options]="options"
+          [readOnly]="false">
+        </ace-editor>
       </div>
     </md-tab>
+
+
     <md-tab>
       <ng-template md-tab-label>
         Javascript
       </ng-template>
       <div class="current-work">
-        <ace-editor [text]="script" theme="monokai" mode="javascript" style="height: 100%"></ace-editor>
+        <ace-editor
+          [(text)]="jsCode"
+          [theme]="theme"
+          [mode]="'javascript'"
+          [options]="options"
+          [readOnly]="false">
+        </ace-editor>
+      </div>
+    </md-tab>
+  </md-tab-group>
+
+  <md-tab-group *ngIf="language == 1" class="full-width" dynamicHeight="true">
+
+    <md-tab>
+      <ng-template md-tab-label>
+        Python
+      </ng-template>
+      <div class="current-work">
+        <ace-editor
+          [(text)]="pythonCode"
+          [theme]="theme"
+          [mode]="'python'"
+          [options]="options"
+          [readOnly]="false">
+        </ace-editor>
+      </div>
+    </md-tab>
+  </md-tab-group>
+
+  <md-tab-group *ngIf="language == 2" class="full-width" dynamicHeight="true">
+    <md-tab>
+      <ng-template md-tab-label>
+        C/C++
+      </ng-template>
+      <div class="current-work">
+        <ace-editor
+          [(text)]="cppCode"
+          [theme]="theme"
+          [mode]="'c_cpp'"
+          [options]="options"
+          [readOnly]="false">
+        </ace-editor>
       </div>
     </md-tab>
   </md-tab-group>

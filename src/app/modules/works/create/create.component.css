@@ -1,7 +1,14 @@
 .work-overview{
   width: 100%;
   min-height: 50vh;
+  margin-top: 25px;
 }
 .current-work{
-  height: 50vh;
+  height: 70vh;
+}
+
+ace-editor{
+  min-height: 600px;
+  width: 100%;
+  overflow: auto;
 }

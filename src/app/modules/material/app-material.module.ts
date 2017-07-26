@@ -12,16 +12,14 @@ import {
     MdInputModule,
     MdSidenavModule,
     MdGridListModule,
-    MdSnackBarModule,
-    MdMenuModule
+    MdSnackBarModule
   ],
   exports: [
     MdTooltipModule,
     MdInputModule,
     MdSidenavModule,
     MdGridListModule,
-    MdSnackBarModule,
-    MdMenuModule
+    MdSnackBarModule
   ]
 })
 export class AppMaterialModule {

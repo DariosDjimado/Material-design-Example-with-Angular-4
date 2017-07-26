@@ -10,7 +10,7 @@ import {ScreenService} from '../../services/screen.service';
 export class MainComponent implements OnInit, OnDestroy {
   dynamicMode = 'side';
   sidenavOpened = false;
-
+  showSearchBar = false;
   onSmallScreenSubscription: Subscription;
 
   constructor(private screenService: ScreenService) {

@@ -24,10 +24,15 @@ md-sidenav-container{
 }
 
 .main-content{
-  max-width: 960px;
+  max-width: 1200px;
   width: 100%;
   min-height: calc(100vh - 192px);
   height: 100%;
-  margin: 10px 10px 0 10px;
+  padding: 10px 10px;
 }
 
+@media only screen and (min-width: 350px){
+  .main-content{
+    padding: 10px 20px;
+  }
+}
